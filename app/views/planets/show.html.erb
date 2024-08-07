@@ -1,0 +1,25 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @planet.banner_url %>);">
+  <div class="container">
+    <h1><%= @planet.name %></h1>
+    <%= link_to 'Add Alien', new_planet_alien_path(@planet), class: 'btn btn-danger mt-2'  %>
+  </div>
+</div>
+<div class="container mt-3">
+  <div class="cards">
+    <% @planet.aliens.each do |alien| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= alien.image_url %>)">
+        <%= alien.name %>
+        <%= link_to alien_path(alien), class: 'card-remove-link', data: { turbo_method: :delete, turbo_confirm: "Destroy #{alien.name}?"} do %>
+          <i class="fa-solid fa-rocket"></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div class="d-flex justify-content-center">
+    <%= simple_form_for [@planet, @alien] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :image_url %>
+      <%= f.submit 'Submit', class: 'btn btn-danger mt-2' %>
+    <% end %>
+  </div>
+</div>

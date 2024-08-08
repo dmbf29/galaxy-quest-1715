@@ -82,3 +82,12 @@ Alien.create!(
   planet: planet
 )
 puts "... created #{Alien.count} aliens"
+
+
+puts "Creating alliances..."
+10.times do
+  Alliance.create!(
+    name: Faker::Space.unique.agency
+  )
+end
+puts "... created #{Alliance.count} alliances."

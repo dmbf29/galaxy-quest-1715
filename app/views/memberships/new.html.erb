@@ -1,0 +1,7 @@
+<div class="container mt-3">
+  <h1>Join an Alliance</h1>
+  <%= simple_form_for [@alien, @membership] do |f| %>
+    <%= f.association :alliance, collection: @alliances, include_blank: false %>
+    <%= f.submit 'Submit', class: 'btn btn-danger mt-2' %>
+  <% end %>
+</div>

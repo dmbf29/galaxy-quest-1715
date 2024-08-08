@@ -12,6 +12,14 @@
         <%= link_to alien_path(alien), class: 'card-remove-link', data: { turbo_method: :delete, turbo_confirm: "Destroy #{alien.name}?"} do %>
           <i class="fa-solid fa-rocket"></i>
         <% end %>
+        <%= link_to new_alien_membership_path(alien), class: 'card-add-link' do %>
+          <i class="fa-solid fa-medal"></i>
+        <% end %>
+        <div class="card-tags">
+          <% alien.alliances.each do |alliance| %>
+            <span><%= alliance.name %></span>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>

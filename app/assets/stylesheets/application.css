@@ -1,3 +1,19 @@
+.card-tags {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  width: 80%;
+  span {
+    background: rgb(207, 61, 61);
+    font-size: .7em;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  a {
+    color: white;
+  }
+}
+
 .banner {
   background-size: cover;
   background-position: center;
@@ -46,6 +62,25 @@
   width: 30px;
   position: absolute;
   right: 10px;
+  top: 10px;
+  opacity: 0.8;
+  font-weight: lighter;
+  text-decoration: none;
+  &:hover {
+    color: white;
+    opacity: 1;
+  }
+}
+
+.card-add-link {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 10px;
   top: 10px;
   opacity: 0.8;
   font-weight: lighter;

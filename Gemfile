@@ -69,4 +69,5 @@ group :test do
 end
 
 # Custom Added
+gem 'faker'
 gem 'simple_form'

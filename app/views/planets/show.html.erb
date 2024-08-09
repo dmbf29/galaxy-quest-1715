@@ -4,10 +4,14 @@
     <%= link_to 'Add Alien', new_planet_alien_path(@planet), class: 'btn btn-danger mt-2'  %>
   </div>
 </div>
+<%# alien = Alien.last %>
+<%# cl_image_path alien.photo.key,
+  <%# cl_image_tag alien.photo.key,
+    width: 300, height: 300, crop: :thumb, gravity: :face %>
 <div class="container mt-3">
   <div class="cards">
     <% @planet.aliens.each do |alien| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= alien.image_url %>)">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= alien.photo.attached? ? cl_image_path(alien.photo.key) : alien.image_url %>)">
         <%= alien.name %>
         <%= link_to alien_path(alien), class: 'card-remove-link', data: { turbo_method: :delete, turbo_confirm: "Destroy #{alien.name}?"} do %>
           <i class="fa-solid fa-rocket"></i>

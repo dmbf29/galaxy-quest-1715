@@ -70,5 +70,6 @@ group :test do
 end
 
 # Custom Added
+gem "cloudinary"
 gem 'faker'
 gem 'simple_form'

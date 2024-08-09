@@ -1,23 +1,8 @@
-.card-tags {
-  position: absolute;
-  bottom: 8px;
-  left: 8px;
-  width: 80%;
-  span {
-    background: rgb(207, 61, 61);
-    font-size: .7em;
-    padding: 2px 4px;
-    border-radius: 3px;
-  }
-  a {
-    color: white;
-  }
-}
 
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 80px 0;
 }
 
 .banner h1 {
@@ -33,6 +18,30 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.card-category-link{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.card-tags {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  width: 80%;
+  span {
+    background: rgb(207, 61, 61);
+    font-size: .7em;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  a {
+    color: white;
+  }
 }
 
 .card-category {
